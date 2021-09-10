@@ -1,0 +1,79 @@
+.navbar-top {
+  border-bottom: 3px solid green;
+}
+
+.navbar-bottom {
+  border-top: 3px solid gray;
+
+}
+
+h3 {
+  margin-top: 3em;
+  margin-left: .7em;
+}
+.container {
+  width: 100%;
+}
+
+.bg-blue {
+  background-color: darkblue;
+  color: white;
+}
+
+button {
+
+  margin: .25em .5em .25em 0;
+}
+
+label {
+  margin: 0 1.5em 0 0;
+}
+
+.form-table tr td {
+  padding-bottom: 1em;
+}
+
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+}
+
+.form-table {
+  display:none;
+}
+
+td:nth-child(2) {
+  text-align: left;
+}
+
+@media (max-width: 480px) {
+  .small {
+    text-align: center;
+    margin: 0 1em auto;
+  }
+  .small button {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  li {
+    margin: 0 2.7em;
+  }
+  li button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-form {
+    display:none;
+  }
+  .form-table {
+    display:inline-table;
+  }
+}

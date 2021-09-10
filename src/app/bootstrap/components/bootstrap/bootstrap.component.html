@@ -1,0 +1,436 @@
+<nav class="navbar navbar-default navbar-expand-lg navbar-fixed-top navbar-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="bootstrap" name="title" (click)="handleButtonClick($event)">Bootstrap
+        Training</a>
+      <button class="btn btn-default navbar-toggler navbar-toggle collapsed" type="button" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="glyphicon glyphicon-triangle-bottom"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="border-right"><a name="profile" (click)="handleButtonClick($event)">Juan Dela Cruz</a>
+        </li>
+        <li><a name="home" (click)="handleButtonClick($event)">Home</a></li>
+        <li><a name="help" (click)="handleButtonClick($event)">Help</a></li>
+        <li><a name="logout" (click)="handleButtonClick($event)">Logout</a></li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+<form class="form-horizontal" [formGroup]="reportForm" (ngSubmit)="onSubmit(template)" novalidate>
+
+  <h3>My Bootstrap Report</h3>
+  <div class="panel panel-default">
+    <div class="container-fluid">
+      <div class="btn-toolbar small big">
+        <button class="btn btn-primary pull-right" name="copy report" (click)="handleButtonClick($event)">
+          Copy Report</button>
+        <button class="btn btn-primary pull-right" name="print" (click)="handleButtonClick($event)">
+          Print</button>
+        <button class="btn btn-primary pull-right" name="status track" (click)="handleButtonClick($event)">
+          Status Track</button>
+        <button class="btn btn-primary pull-right" name="inquire" (click)="handleButtonClick($event)">
+          Inquire</button>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Request Information</div>
+        <div class="panel-body">
+          <!-- put previous code here-->
+          <table class="table text-right form-table table-borderless">
+            <colgroup>
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 35%;">
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 35%;">
+            </colgroup>
+            <tbody>
+
+
+              <tr>
+                <td><label class="control-label" for="repNo">Report No.</label></td>
+                <td> <span><input type="number" class="form-control input-sm" name="repNo" id="repNo"
+                      formControlName="repNo"></span></td>
+                <td><label class="control-label" for="reqNo">Request No.</label></td>
+                <td> <span><input type="number" class="form-control input-sm" name="reqNo" id="reqNo"
+                      formControlName="reqNo"></span></td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="control-label" for="repStatus">Report Status</label>
+                </td>
+                <td> <span><input type="text" class="form-control input-sm" name="repStatus" id="repStatus"
+                      formControlName="repStatus"></span>
+                </td>
+                <td><label class="control-label" for="statusDate">Status Date</label></td>
+                <td> <span><input type="text" class="form-control input-sm" name="statusDate" id="statusDate"
+                      formControlName="statusDate"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="appraiser">Appraiser</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="appraiser" id="appraiser"
+                      formControlName="appraiser"></span></td>
+                <td><label class="control-label" for="reqBy">Requested by</label></td>
+                <td> <span><input type="text" class="form-control input-sm" name="reqBy" id="reqBy"
+                      formControlName="reqBy"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="devName">Developer name</label></td>
+                <td colspan="3"><span><input type="text" class="form-control input-sm" name="devName" id="devName"
+                      formControlName="devName"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="repDate">Report Date</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="repDate" id="repDate"
+                      formControlName="repDate"></span></td>
+                <td> <label class="control-label" for="reqDate">Request Date</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="reqDate" id="reqDate"
+                      formControlName="reqDate"></span></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <!-- mobile -->
+          <div class="container-fluid mobile-form">
+
+            <div class="form-group row">
+              <label class="control-label" for="repNo">Report No.</label>
+              <span><input type="number" class="form-control input-sm" name="repNo" id="repNo"
+                  formControlName="repNo"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="reqNo">Request No.</label>
+              <span><input type="number" class="form-control input-sm" name="reqNo" id="reqNo"
+                  formControlName="reqNo"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="reqStatus">Request Status</label>
+              <span><input type="text" class="form-control input-sm" name="repStatus" id="repStatus"
+                  formControlName="repStatus"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="statusDate">Status Date</label>
+              <span><input type="text" class="form-control input-sm" name="statusDate" id="statusDate"
+                  formControlName="statusDate"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="appraiser">Appraiser</label>
+              <span><input type="text" class="form-control input-sm" name="appraiser" id="appraiser"
+                  formControlName="appraiser"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="reqBy">Requested by</label>
+              <span><input type="text" class="form-control input-sm" name="reqBy" id="reqBy"
+                  formControlName="reqBy"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="devName">Developer name</label>
+              <span><input type="text" class="form-control input-sm" name="devName" id="devName"
+                  formControlName="devName"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="repDate">Report Date</label>
+              <span><input type="text" class="form-control input-sm" name="repDate" id="repDate"
+                  formControlName="repDate"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="reqDate">Request Date</label>
+              <span><input type="text" class="form-control input-sm" name="reqDate" id="reqDate"
+                  formControlName="reqDate"></span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">Project Profile</div>
+        <div class="panel-body">
+          <table class="table text-right form-table table-borderless">
+            <colgroup>
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 35%;">
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 35%;">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td><label class="control-label" for="projName">Project name</label></td>
+                <td colspan="3"><span><input type="text" class="form-control input-sm" name="projName" id="projName"
+                      formControlName="projName"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="propLocation">Property Location</label></td>
+                <td colspan="3"><span><input type="text" class="form-control input-sm" name="propLocation"
+                      id="propLocation" formControlName="propLocation"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="province">Province</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="province" id="province"
+                      formControlName="province"></span></td>
+                <td><label class="control-label" for="city">City</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="city" id="city"
+                      formControlName="city"></span></td>
+              </tr>
+              <tr>
+                <td><label class="control-label" for="scheme">Scheme</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="scheme" id="scheme"
+                      formControlName="scheme"></span></td>
+                <td><label class="control-label" for="purpose">Purpose</label></td>
+                <td><span><input type="text" class="form-control input-sm" name="purpose" id="purpose"
+                      formControlName="purpose"></span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="container-fluid mobile-form">
+
+            <div class="form-group row">
+              <label class="control-label" for="projName">Project name</label>
+              <span><input type="text" class="form-control input-sm" name="projName" id="projName"
+                  formControlName="projName"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="propLocation">Property Location</label>
+              <span><input type="text" class="form-control input-sm" name="propLocation" id="propLocation"
+                  formControlName="propLocation"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="province">Province</label>
+              <span><input type="text" class="form-control input-sm" name="province" id="province"
+                  formControlName="province"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="city">City</label>
+              <span><input type="text" class="form-control input-sm" name="city" id="city"
+                  formControlName="city"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="scheme">Scheme</label>
+              <span><input type="text" class="form-control input-sm" name="scheme" id="scheme"
+                  formControlName="scheme"></span>
+            </div>
+
+            <div class="form-group row">
+              <label class="control-label" for="purpose">Purpose</label>
+              <span><input type="text" class="form-control input-sm" name="purpose" id="purpose"
+                  formControlName="purpose"></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">User Results</div>
+        <div class="panel-body">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr class="bg-blue">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Address</th>
+                <th scope="col">User Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Makati</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Makati</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>Velasquez</td>
+                <td>Quezon City</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Makati</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Makati</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Larry</td>
+                <td>Velasquez</td>
+                <td>Quezon City</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>Makati</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>Makati</td>
+                <td>User</td>
+              </tr>
+              <tr>
+                <th scope="row">9</th>
+                <td>Larry</td>
+                <td>Velasquez</td>
+                <td>Quezon City</td>
+                <td>User</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Field Data</h4>
+
+      </div>
+      <div class="modal-body">
+        <table class="table text-right table-borderless modal-table">
+          <colgroup>
+            <col span="1" style="width: 50%;">
+            <col span="1" style="width: 50%;">
+          </colgroup>
+          <tbody>
+            <tr>
+              <td><strong> Report No.: </strong></td>
+              <td>{{ reportForm.value.repNo }}</td>
+            </tr>
+            <tr>
+              <td><strong>Request No.:</strong></td>
+              <td>{{ reportForm.value.reqNo }}</td>
+            </tr>
+            <tr>
+              <td><strong> Report Status: </strong></td>
+              <td>{{ reportForm.value.repStatus }}</td>
+            </tr>
+            <tr>
+              <td><strong> Status Date:</strong></td>
+              <td>{{ reportForm.value.statusDate }}</td>
+            </tr>
+            <tr>
+              <td><strong>Appraiser:</strong></td>
+              <td>{{ reportForm.value.appraiser }}</td>
+            </tr>
+            <tr>
+              <td><strong> Requested by: </strong></td>
+              <td>{{ reportForm.value.reqBy }}</td>
+            </tr>
+            <tr>
+              <td><strong>Developer name:</strong></td>
+              <td>{{ reportForm.value.devName }}</td>
+            </tr>
+            <tr>
+              <td><strong> Report Date: </strong></td>
+              <td>{{ reportForm.value.repDate }}</td>
+            </tr>
+            <tr>
+              <td><strong>Request Date:</strong></td>
+              <td>{{ reportForm.value.reqDate }}</td>
+            </tr>
+            <tr>
+              <td><strong>Project name:</strong></td>
+              <td>{{ reportForm.value.projName }}</td>
+            </tr>
+            <tr>
+              <td><strong> Property Location: </strong></td>
+              <td>{{ reportForm.value.propLocation }}</td>
+            </tr>
+            <tr>
+              <td><strong>Province:</strong></td>
+              <td>{{ reportForm.value.province }}</td>
+            </tr>
+            <tr>
+              <td><strong> City: </strong></td>
+              <td>{{ reportForm.value.city }}</td>
+            </tr>
+            <tr>
+              <td><strong>Scheme:</strong></td>
+              <td>{{ reportForm.value.scheme }}</td>
+            </tr>
+            <tr>
+              <td><strong>Purpose:</strong></td>
+              <td>{{ reportForm.value.purpose }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+       
+
+      </div>
+      <div class="modal-footer">
+        <button type="button btn-default" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          Close
+        </button>
+      </div>
+    </ng-template>
+
+    <nav class="navbar navbar-default navbar-expand-lg navbar-fixed-bottom navbar-bottom">
+      <div class="container fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><button class="btn btn-primary" name="cancel" (click)="handleButtonClick($event)">Cancel</button></li>
+            <li><button class="btn btn-primary" name="return" (click)="handleButtonClick($event)">Return</button></li>
+            <li><button class="btn btn-primary" name="save" (click)="handleButtonClick($event)">Save</button></li>
+            <li><button class="btn btn-primary" type="submit">Submit</button></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li><button class="btn btn-default" name="back" (click)="handleButtonClick($event)">Back</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="btn btn-default navbar-toggler navbar-toggle collapsed" type="button" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-2" aria-controls="bs-example-navbar-collapse-2" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="glyphicon glyphicon-triangle-top"></span>
+      </button>
+    </nav>
+
+  </div>
+</form>
