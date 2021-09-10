@@ -60,12 +60,15 @@ td:nth-child(2) {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   li {
     margin: 0 2.7em;
   }
   li button {
     width: 100%;
+  }
+  .navbar-top {
+    text-align: center;
   }
 }
 
